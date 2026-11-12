@@ -166,7 +166,7 @@ function sendWhatsApp() {
 
     const encodedMessage = encodeURIComponent(message);
     const url = `https://wa.me{WHATSAPP_NUMBER}?text=${encodedMessage}`;
-    window.open(url, "_blank");
+    window.open(url, "_blank", "noopener");
 }
 
 // Inicia o catálogo ao abrir a página
