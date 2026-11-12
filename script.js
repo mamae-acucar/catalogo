@@ -165,7 +165,7 @@ function sendWhatsApp() {
     message += `\n*Total: ${formatMoney(total)}*`;
 
     const encodedMessage = encodeURIComponent(message);
-    const url = `https://wa.me{WHATSAPP_NUMBER}?text=${encodedMessage}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
     window.open(url, "_blank", "noopener");
 }
 
