@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Catálogo Mamãe Açúcar</title>
+        <link rel="shortcut icon" href="images/bolinho.png" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>🧁 Mamãe Açúcar 🧁</h1>
+            <p>Feito com amor e ingredientes selecionados</p>
+        </header>
+
+        <!-- Filtros -->
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProducts('todos', this)">Todos</button>
+            <button class="filter-btn" onclick="filterProducts('bolos', this)">Bolos</button>
+            <button class="filter-btn" onclick="filterProducts('doces', this)">Doces</button>
+            <button class="filter-btn" onclick="filterProducts('salgados', this)">Salgados</button>
+        </div>
+
+        <!-- Lista de Produtos -->
+        <main class="catalog-container" id="catalog">
+            <!-- Os produtos serão inseridos aqui via JavaScript -->
+        </main>
+
+        <!-- Barra Inferior do Carrinho -->
+        <div class="cart-bar">
+            <div class="cart-summary"><span id="cart-count">0 itens</span> | <span id="cart-total">R$ 0,00</span></div>
+            <button class="checkout-btn" id="open-cart-btn" onclick="openModal()" disabled>Ver Pedido</button>
+        </div>
+
+        <!-- Modal de Revisão do Pedido -->
+        <div class="modal" id="cart-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Seu Pedido</h2>
+                    <button class="close-btn" onclick="closeModal()">&times;</button>
+                </div>
+                <div id="cart-items-list"></div>
+                <div style="margin-top: 1.5rem; text-align: right; font-weight: bold; font-size: 1.1rem">
+                    Total: <span id="modal-total">R$ 0,00</span>
+                </div>
+                <button
+                    class="checkout-btn"
+                    style="width: 100%; justify-content: center; margin-top: 1rem"
+                    onclick="sendWhatsApp()"
+                >
+                    Enviar Pedido no WhatsApp
+                </button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
