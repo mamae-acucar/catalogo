@@ -19,6 +19,7 @@
             <button class="filter-btn" onclick="filterProducts('bolos', this)">Bolos</button>
             <button class="filter-btn" onclick="filterProducts('doces', this)">Doces</button>
             <button class="filter-btn" onclick="filterProducts('salgados', this)">Salgados</button>
+            <button class="filter-btn builder-btn" onclick="openBuilder()">🎂 Monte seu bolo</button>
         </div>
 
         <!-- Lista de Produtos -->
@@ -52,6 +53,46 @@
                 </button>
             </div>
         </div>
+        <!-- Modal: Monte seu bolo -->
+        <div class="modal" id="builder-modal" onclick="if (event.target === this) closeBuilder();">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>🎂 Monte seu bolo</h2>
+                    <button class="close-btn" onclick="closeBuilder()">&times;</button>
+                </div>
+
+                <h3 class="builder-step">1. Escolha a massa</h3>
+                <div id="builder-massas" class="option-list"></div>
+
+                <h3 class="builder-step">2. Escolha os recheios <small id="builder-limit"></small></h3>
+                <div id="builder-recheios" class="option-list"></div>
+
+                <h3 class="builder-step">3. Quantas fatias?</h3>
+                <div class="slices-control">
+                    <button onclick="changeSlices(-1)">-</button>
+                    <span id="builder-slices">1</span>
+                    <button onclick="changeSlices(1)">+</button>
+                </div>
+
+                <div class="builder-total">Total: <span id="builder-price">R$ 0,00</span></div>
+                <button class="checkout-btn builder-add" id="builder-add-btn" onclick="addCustomCake()" disabled>
+                    Adicionar ao pedido
+                </button>
+
+                <h3 class="builder-step">1. Escolha a massa</h3>
+                <div id="builder-massas" class="option-list"></div>
+
+                <h3 class="builder-step">2. Escolha os recheios <small id="builder-limit"></small></h3>
+                <div id="builder-recheios" class="option-list"></div>
+
+                <div class="builder-total">Total: <span id="builder-price">R$ 0,00</span></div>
+                <button class="checkout-btn builder-add" id="builder-add-btn" onclick="addCustomCake()" disabled>
+                    Adicionar ao pedido
+                </button>
+            </div>
+        </div>
+        <script src="products.js"></script>
+        <script src="recheios.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
