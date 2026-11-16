@@ -1,5 +1,5 @@
 // 1. NÚMERO DO WHATSAPP (Troque pelo seu: DDI + DDD + Número)
-const WHATSAPP_NUMBER = "5513991312486";
+const WHATSAPP_NUMBER = "5547988253224";
 
 let cart = [];
 
