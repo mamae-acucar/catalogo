@@ -4,7 +4,7 @@ const products = [
         id: 1,
         name: "Bolo Red Velvet (fatia)",
         category: "bolos",
-        price: 4.7,
+        price: 4.8,
         desc: "Massa aveludada vermelha com recheio cremoso de cream cheese e frutas vermelhas.",
         img: "images/recheios/bolo_velvet.jpg",
     },
